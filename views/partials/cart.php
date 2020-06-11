@@ -1,5 +1,5 @@
 <section class="col cart">
-    <?php if($_SESSION) :?>
+    <?php if($_SESSION['user'] && $_SESSION['user']['is_admin']==0) :?>
             <div class="col cart-title">
                 <h2>Joueurs sélectionné pour transfert</h2>
                 <hr>
@@ -21,7 +21,7 @@
             </div>
     <?php else: ?>
         <div class="row center cart-content">
-            <h2>Connectez vous pour accéder a la liste de transfert</h2>
+            <h2>Vous devez être engagé par un club pour pouvoir avoir accès à la lise des transferts</h2>
             
         </div>
     <?php endif; ?>

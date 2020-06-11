@@ -15,7 +15,7 @@
         <div class="row center sign">
             <h3>Vous êtes dirigeant ou faites partie du STAFF <br> d’un club professionnel?</h3>
             <?php if(isset($_SESSION['user'])) :?>
-                <a class="btn-see" href="index.php?p=user&action=in">Rejoindre la plateforme</a>
+                <a class="btn-see" href="index.php?p=user&action=in">Espace utilisateur</a>
             <?php else:?>
                 <a class="btn-see" href="index.php?p=user&action=signIn">Rejoindre la plateforme</a>
             <?php endif;?>

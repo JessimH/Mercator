@@ -1,6 +1,6 @@
 <section class="row all-v user">
     <div class="row user-info">
-        <div class="user-img row center" style="background-image: url('assets/images/clubs/'); background-size: cover;"></div>
+        <div class="user-img row center"></div>
         <div class="col">
             <h2><?= $_SESSION['user']['username'] ?></h2>
             <?php if($_SESSION['user']['is_admin']== 1) :?>
