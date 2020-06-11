@@ -46,7 +46,7 @@ To test it, install the sql file in your database, and activate Mamp or Wamp in 
 <br>
 - email: a121298@hotmail.fr
 
-Portfolio : [JessDev](https://mjm-webdesign.com/~dv19heddadi/index.html)
+- Portfolio : [JessDev](https://mjm-webdesign.com/~dv19heddadi/index.html)
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/jessim-heddadi-962734177/
