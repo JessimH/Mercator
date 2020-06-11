@@ -7,4 +7,4 @@ require('models/Clubs.php');
 $clubs = getAllClubs();
 $users = getAllUsers();
 
-include 'views/404.php';
+include 'views/achat.php';

@@ -16,7 +16,7 @@
 
             <h2>Formulaire de l'Utilisateur :</h2>
             <label for="username">Username : </label>
-            <input  type="text" name="username" id="" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['username'] : '' ?><?= isset($user) ? $user['username'] : '' ?>"/>
+            <input  type="text" name="username" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['username'] : '' ?><?= isset($user) ? $user['username'] : '' ?>"/>
 
             <label for="is_admin">Admin :</label>
             <div class="col center"> 
@@ -37,9 +37,9 @@
             </div>
 
             <?php if($_GET['action'] == 'new') :?>
-                <input type="email" name="email" id="" placeholder="Email">
-                <input type="password" name="password" id="" placeholder="Password">
-                <input type="text" name="adress" id="" placeholder="Adresse du club">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="text" name="adress" placeholder="Adresse du club">
             <?php endif;?>
 
             <label for="club">CLub :</label>

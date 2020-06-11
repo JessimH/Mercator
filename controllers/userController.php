@@ -1,8 +1,8 @@
 <?php
-
-require_once 'models/Players.php';
-require_once 'models/Clubs.php';
-require_once 'models/Users.php';
+require('models/Players.php');
+require('models/Postes.php');
+require('models/Users.php');
+require('models/Clubs.php');
 
 $clubs = getAllClubs();
 $users = getAllUsers();

@@ -15,7 +15,7 @@
             <h3>la page que vous avez demandez n'a pas été trouvé...</h3>
             <h3>Vous êtes hors jeu!</h3>
         </div>
-        <img src="http://38.media.tumblr.com/9880001c5079ac539be14f4685df16d6/tumblr_mwqtanitIS1rou5tvo1_500.gif" alt="">
+        <img src="http://38.media.tumblr.com/9880001c5079ac539be14f4685df16d6/tumblr_mwqtanitIS1rou5tvo1_500.gif" alt="page non trouvé">
 
     </section>
 

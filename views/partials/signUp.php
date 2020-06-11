@@ -3,11 +3,11 @@
         <h1>S'inscrire</h1>
         <form class="col center" action="index.php?p=user&action=signUp" method="post">
 
-            <input type="text" name="username" id="" placeholder="Username">
+            <input type="text" name="username" placeholder="Username">
 
-            <input type="password" name="password" id="" placeholder="Password">
+            <input type="password" name="password" placeholder="Password">
 
-            <input type="email" name="email" id="" placeholder="Email">
+            <input type="email" name="email" placeholder="Email">
 
             <select name="club_id" id="pet-post_id">
 
@@ -17,7 +17,7 @@
 
             </select>
 
-            <input type="text" name="adress" id="" placeholder="Adresse du club">
+            <input type="text" name="adress" placeholder="Adresse du club">
 
             <button class="btn-see" type="submit">S'inscrire</button>
             
@@ -25,5 +25,5 @@
 
         </form>
     </div>
-    <img class="user-form-img2" src="assets/images/kimpembe2.png" alt="">
+    <img class="user-form-img2" src="assets/images/kimpembe2.png" alt="Kimpembe">
 </section>

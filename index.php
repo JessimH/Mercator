@@ -7,6 +7,10 @@ if(isset($_GET['p'])):
         case 'player' :
             require 'controllers/playerController.php';
             break;
+        
+        case 'achat' :
+            require 'controllers/achatController.php';
+            break;
 
         case 'club' :
             require 'controllers/clubController.php';

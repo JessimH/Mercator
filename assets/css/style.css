@@ -243,6 +243,10 @@ nav ul li a:hover {
   border-radius: 50%;
 }
 
+.img-user:hover {
+  border: 2px solid #006AF8;
+}
+
 .btn-see, .btn-update, .btn-buy {
   cursor: pointer;
   text-align: center;

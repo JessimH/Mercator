@@ -12,12 +12,10 @@
 
     <section class="row all-v center add-player">
 
-        <img class="img-product" src="assets/images/mbappe.png" alt="">
-
         <form class="col center" action="index.php?p=player&action=<?= isset($player) || (isset($_SESSION['old_inputs']) && $_GET['action'] != 'new') ? 'edit&id='.$_GET['id'] : 'add' ?>" method="post" enctype="multipart/form-data">
 
             <h2>Formulaire du joueur :</h2>
-            <input  type="text" name="name" id="" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['name'] : '' ?><?= isset($player) ? $player['name'] : '' ?>"/>
+            <input  type="text" name="name" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['name'] : '' ?><?= isset($player) ? $player['name'] : '' ?>"/>
 
             <label for="club">Club :</label>
             <select name="id_club" id="pet-id_club">
@@ -34,9 +32,9 @@
             </select>
              
             <label for="price">PRIX (en million €)</label>
-            <input  type="number" name="price" id="" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['price'] : '' ?><?= isset($player) ? $player['price'] : '' ?>"/>
+            <input  type="number" name="price" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['price'] : '' ?><?= isset($player) ? $player['price'] : '' ?>"/>
 
-            <textarea id="" name="description"><?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['description'] : '' ?><?= isset($player) ? $player['description'] : '' ?></textarea>
+            <textarea name="description"><?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['description'] : '' ?><?= isset($player) ? $player['description'] : '' ?></textarea>
             
             <label for="image">Image Portrait :</label>
             <input  type="file" name="image" id="image"/>

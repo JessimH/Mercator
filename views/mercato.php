@@ -35,10 +35,8 @@
                             <img src="assets/images/clubs/<?= $club['image']?>" alt="<?= $club['abbreviation'] ?>" class="icon ">
                         </a>
                     </li>
-                <?php endforeach; ?>
-                
+                <?php endforeach; ?>    
             </ul>
-            
         </section>
 
         <section class="row product-list">

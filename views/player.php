@@ -25,7 +25,7 @@
             <h2><?= $player['description'] ?></h2>
             <h2 class="price"><?= $player['price'] ?>M €</h2>
                 <?php if(isset($_SESSION['user']) && $_SESSION['user']['is_admin']==0): ?>
-                    <a class="btn-see" href="">Contacter le club</a>
+                    <a class="btn-see" href="index.php?p=achat">Contacter le club</a>
                 <?php endif; ?>
         </section>
 

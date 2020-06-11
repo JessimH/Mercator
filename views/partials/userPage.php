@@ -1,12 +1,24 @@
 <section class="row all-v user">
     <div class="row user-info">
-        <div class="user-img row center"></div>
+    <?php if($_SESSION['user']['is_admin']== 1) :?>
+        <div class="user-img row center"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+    <?php else:?>
+        <?php foreach ($clubs as $club) :?>
+            <?php if($club['id'] == $_SESSION['user']['club_id']) :?>
+            <div class="user-img row center"><img width="100" height="100" src="assets/images/clubs/<?= $club['image'] ?>" alt="<?= $club['name'] ?>"></div>
+            <?php endif;?>
+        <?php endforeach; ?>
+    <?php endif;?>
         <div class="col">
             <h2><?= $_SESSION['user']['username'] ?></h2>
             <?php if($_SESSION['user']['is_admin']== 1) :?>
                 <h3>ADMIN</h3>
-            <?php else:?>    
-                <h3><?= $club['abbreviation'] ?></h3>
+            <?php else:?>   
+                <?php foreach ($clubs as $club) :?> 
+                    <?php if($club['id'] == $_SESSION['user']['club_id']) :?>
+                        <h3><?= $club['abbreviation'] ?></h3>
+                    <?php endif;?>
+                <?php endforeach; ?>
             <?php endif;?>
             <a class="btn-deco" href="index.php?p=user&action=getOut">Deconnexion</a>
         </div>
