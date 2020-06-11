@@ -22,14 +22,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/jessim-heddadi-962734177/]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -37,8 +30,6 @@
   <a href="https://github.com/github_username/repo">
     <img src="assets/images/Logo.png" alt="Logo" width="200">
   </a>
-
-  <h3 align="center">MERCATOR.</h3>
 
   <p align="center">
     Bienvenue sur la première plateforme de vente et rachat de joueurs de football au monde !
@@ -183,5 +174,4 @@ Project Link: [https://github.com/github_username/repo](https://github.com/githu
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
