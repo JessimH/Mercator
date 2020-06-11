@@ -43,7 +43,6 @@ To test it, install the sql file in your database, and activate Mamp or Wamp in 
 ## Contact
 
 - Twitter- [@JessDevjr](https://twitter.com/JessDevjr) 
-<br>
 
 - email: a121298@hotmail.fr
 
