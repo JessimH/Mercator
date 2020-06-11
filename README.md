@@ -9,7 +9,6 @@
   <p align="center">
     The world's leading platform for selling and buying football players!
     <br />
-    <a href="https://github.com/JessimH/Mercator"><strong>Explore the docs »</strong></a>
     <br />
     <br />
    </p>
