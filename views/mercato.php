@@ -69,7 +69,7 @@
                     <div class="product-price ">
                         <h3><?= $player['price']?> M €</h3>
 
-                        <?php if(isset($_SESSION['user'])): ?>
+                        <?php if(isset($_SESSION['user']) && $_SESSION['user']['is_admin']==0): ?>
                             <button class="add-to-cart ">+</button>
                         <?php endif; ?>  
                         <a href="index.php?p=mercato&action=playerSelected&id=<?= $player['id'] ?>" class="btn-see">
