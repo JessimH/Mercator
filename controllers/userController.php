@@ -5,8 +5,10 @@ require_once 'models/Clubs.php';
 require_once 'models/Users.php';
 
 $clubs = getAllClubs();
+$users = getAllUsers();
 
 switch ($_GET['action']){
+    
     case 'list' :
         $users = getAllUsers();
         require('views/user.php');
@@ -41,7 +43,7 @@ switch ($_GET['action']){
             else {
                 $newUser = addUser();
                 if ($newUser) {
-                    $_SESSION['messages'][] = 'Bienvenue '.$_SESSION['user']['username'].'!';
+                    $_SESSION['messages'][] = 'Bienvenue'.' '.$_SESSION['user']['username'].'!';
                     header('Location:index.php?p=user&action=in');
                     exit;
                 } 
@@ -75,7 +77,7 @@ switch ($_GET['action']){
                 $getIn = connectUser();
                 
                 if ($getIn) {
-                    $_SESSION['messages'][] = 'Bienvenue'.$_SESSION['user']['username'].'!';
+                    $_SESSION['messages'][] = 'Bienvenue'.' '.$_SESSION['user']['username'].'!';
                     header('Location:index.php?p=user&action=in');
                     exit;
                 } 

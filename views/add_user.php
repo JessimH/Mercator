@@ -21,13 +21,19 @@
             <label for="is_admin">Admin :</label>
             <div class="col center"> 
                 <div class="row center">
-                    <input type="radio" name="is_admin" id="no" <?php if(isset($user) && $user['is_admin'] == 1): ?>selected="selected"<?php endif; ?>>
+                    <input type="radio" name="is_admin" value="1" 
+                        <?php if(isset($user) && $user['is_admin'] == 1): ?>
+                            checked
+                        <?php endif; ?>>
                     <label for="no">Yes</label>
-                </div>           
+                </div> 
                 <div class="row center">
-                    <input type="radio" name="is_admin" id="no" <?php if(isset($user) && $user['is_admin'] == 0): ?>selected="selected"<?php endif; ?>>
+                    <input type="radio" name="is_admin" value="0"
+                        <?php if(isset($user) && $user['is_admin'] == 0): ?>
+                            checked
+                        <?php endif; ?>>
                     <label for="no">No</label>
-                </div>
+                </div>            
             </div>
 
             <?php if($_GET['action'] == 'new') :?>
@@ -37,7 +43,7 @@
             <?php endif;?>
 
             <label for="club">CLub :</label>
-            <select name="id_club" id="pet-id_club">
+            <select name="club_id" id="pet-id_club">
                 <?php foreach ($clubs as $club): ?>
                     <option value="<?= $club['id']?>"<?php if(isset($_SESSION['user']) && $_SESSION['user']['club_id'] == $club['id']): ?>selected="selected"<?php endif; ?>><?= $club['name']?></option>
                 <?php endforeach; ?>

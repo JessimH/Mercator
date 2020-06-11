@@ -12,6 +12,10 @@ if(isset($_GET['p'])):
             require 'controllers/clubController.php';
             break;
 
+        case 'admin' :
+            require 'controllers/adminController.php';
+            break;
+
         case 'mercato' :
             require 'controllers/mercatoController.php';
             break;
@@ -30,10 +34,6 @@ if(isset($_GET['p'])):
 
         case '404' :
             require 'controllers/404Controller.php';
-            break;
-        
-        case 'admin' :
-            require 'controllers/adminUserContoller.php';
             break;
 
         default :

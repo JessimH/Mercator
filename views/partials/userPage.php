@@ -94,14 +94,14 @@
                         <div class="row center product-cart">
                             <h3>NOM DE FAMILLE</h3>
                             <h3>A</h3>
-                            <button class="btn-see">Agent</button>
+                            <button class="btn-see">Club</button>
                             <button class="supp-from-cart">-</button>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col cart-buy center">
-                <button class=" btn-buy ">Contactez les Agents</button>
+                <button class=" btn-buy ">Contactez tous les Clubs</button>
             </div>
         <?php endif; ?>
     </div>

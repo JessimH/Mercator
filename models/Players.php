@@ -1,12 +1,22 @@
 <?php
 
-function getHomePlayers()
+function searchPlayer()
 {
+	if(isset($_POST['search'])){
+	$search = $_POST['search'];
 	$db = dbConnect();
-	$query = $db->query('SELECT * FROM players ORDER BY created_at LIMIT 3');
-	$players = $query->fetchAll();
+	$query = $db->prepare("SELECT * FROM players WHERE name = '$search'");
 
-	return $players;
+	$query->execute(
+		[
+        	$search
+		]
+	);
+
+	$player = $query->fetch();
+
+	return $player;
+	}
 }
 
 
@@ -18,9 +28,24 @@ function getAllPlayers()
 	$players =  $query->fetchAll();
 
 	return $players;
-
-
 	
+}
+
+function getPlayerByName()
+{
+	$name = $_POST['search'];
+    $db = dbConnect();
+
+    $query = $db->prepare("SELECT * FROM players WHERE name = '$name'");
+    $query->execute(
+		[
+        	$name
+		]
+	);
+
+	$result =  $query->fetch();
+
+    return $result;
 }
 
 function getPlayer($id)
@@ -180,5 +205,3 @@ function deletePlayer($id)
 	);
 	return $result;
 }
-
-

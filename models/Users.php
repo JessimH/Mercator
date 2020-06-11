@@ -73,11 +73,10 @@ function addUser ()
 function updateUser($id, $informations)
 {
     $db = dbConnect();
-
     $query = $db->prepare('UPDATE users SET username = ?, is_admin = ?, club_id = ?  WHERE id = ?');
     $result = $query->execute(
 		[
-			$informations['username'],
+            $informations['username'],
             $informations['is_admin'],
             $informations['club_id'],
 			$id

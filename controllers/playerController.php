@@ -4,8 +4,20 @@ require('models/Players.php');
 require('models/Postes.php');
 require('models/Users.php');
 require('models/Clubs.php');
+$players = getAllPlayers();
 
 switch ($_GET['action']){
+    case 'search' :
+        $player = getPlayerByName();
+
+        if(empty($player)){
+            header('Location:index.php?p=404');
+        }
+        
+        require('views/player.php');
+        break;
+
+
     case 'list' :
         $players = getAllPlayers();
         require('views/user.php');
