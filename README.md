@@ -18,9 +18,9 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+* [Prerequisites](#Prerequisites)
 * [Built With](#built-with)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
