@@ -42,9 +42,11 @@ To test it, install the sql file in your database, and activate Mamp or Wamp in 
 
 ## Contact
 
-- Twitter- [@JessDevjr](https://twitter.com/JessDevjr) 
+- Twitter : [@JessDevjr](https://twitter.com/JessDevjr) 
 
-- email: a121298@hotmail.fr
+- Linkedin : [JessimHeddadi][linkedin-url]
+
+- Email : a121298@hotmail.fr
 
 - Portfolio : [JessDev](https://mjm-webdesign.com/~dv19heddadi/index.html)
 
