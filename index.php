@@ -31,6 +31,10 @@ if(isset($_GET['p'])):
         case '404' :
             require 'controllers/404Controller.php';
             break;
+        
+        case 'admin' :
+            require 'controllers/adminUserContoller.php';
+            break;
 
         default :
             require 'controllers/indexController.php';

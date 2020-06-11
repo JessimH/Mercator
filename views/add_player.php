@@ -43,6 +43,7 @@
 
             <label for="image">Image Secondaire :</label>
             <input  type="file" name="image_desc" id="image"/>
+            
             <input class="btn-see" type="submit" value="Enregistrer" />
         </form>
     </section>

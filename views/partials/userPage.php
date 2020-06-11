@@ -58,23 +58,30 @@
         <?php if($_SESSION['user']['is_admin'] == 1):?>
             <div class="col cart-title">
                 <h2>Liste des utilisateurs</h2>
+                <h2>1 = admin</h2>
                 <hr>
             </div>
             <div class="col cart-content">
                 <ul>
                     <li>
-                        <div class="row center product-cart">
-                            <h3>admin</h3>
-                            <h3>username</h3>
-                            <h3>club</h3>
-                            <button class="btn-update">update</button>
-                            <button onclick="window.location.href='./index.php?p=user&action=new'" class="supp-from-cart">-</button>
+                    <?php foreach ($users as $user) :?>
+                        <div class="row center product-cart" style="justify-content: space-between;">
+                            <h3><?= $user['is_admin'] ?></h3>
+                            <h3><?= $user['username'] ?></h3>
+                            <?php foreach ($clubs as $club) :?>
+                                <?php if($club['id'] == $user['club_id']) :?>
+                                    <h3><?= $club['abbreviation'] ?></h3>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            <button onclick="window.location.href='./index.php?p=admin&action=edit&id=<?= $user['id'] ?>'" class="btn-update">update</button>
+                            <button onclick="window.location.href='./index.php?p=admin&action=delete&id=<?= $user['id'] ?>'" class="supp-from-cart">-</button>
                         </div>
+                    <?php endforeach; ?>
                     </li>
                 </ul>
             </div>
             <div class="col cart-buy center">
-                <button class=" btn-buy ">ajouter un utilisateur</button>
+                <button onclick="window.location.href='./index.php?p=admin&action=new'" class=" btn-buy ">ajouter un utilisateur</button>
             </div>
         <?php else:?>
             <div class="col cart-title">
