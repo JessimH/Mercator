@@ -35,7 +35,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/Logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">MERCATOR.</h3>
