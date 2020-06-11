@@ -9,6 +9,7 @@
   <p align="center">
     The world's leading platform for selling and buying football players!
     <br />
+    30/06/2020
     <br />
     <br />
    </p>
