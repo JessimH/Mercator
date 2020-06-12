@@ -28,12 +28,21 @@
                         </a>
                     <?php endif; ?>
                 <?php endforeach; ?>
+            <?php elseif(isset($_SESSION['user'])&& $_SESSION['user']['is_admin']==1) :?>
+            <?php foreach($clubs as $club) :?>
+                <?php if($club['id']==$_SESSION['user']['club_id']):?>
+                    <a href="index.php?p=user&action=in">
+                        <a href="index.php?p=user&action=in"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
+                    </a>
+                <?php endif; ?>
+            <?php endforeach; ?>    
             <?php else: ?>
                 <a href="index.php?p=user&action=signIn"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
             <?php endif; ?>
         </li>
     </ul>
 </nav>
+
 <?php if(isset($_SESSION['messages'])): ?>
         <div class="message">
             <?php foreach($_SESSION['messages'] as $message): ?>

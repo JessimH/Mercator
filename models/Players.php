@@ -24,7 +24,7 @@ function getAllPlayers()
 {
     $db = dbConnect();
 
-    $query = $db->query('SELECT * FROM players ORDER by name');
+    $query = $db->query('SELECT * FROM players ORDER by created_at desc');
 	$players =  $query->fetchAll();
 
 	return $players;
