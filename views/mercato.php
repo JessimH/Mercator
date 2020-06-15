@@ -12,10 +12,6 @@
 
     <section class="row content">
 
-        <?php 
-            require ('partials/cart.php');
-        ?>
-
         <section id="up" class="row center categories ">
             <ul class="row categories-ul">
                 <li class="row center all"><a id="cat" href='index.php?p=mercato&action=list'>ALL</a></li>
@@ -39,7 +35,7 @@
             </ul>
         </section>
 
-        <section class="row product-list">
+        <section class="row product-list center">
             <?php foreach($players as $player): ?>
                 <div class="product-template ">
                     <div class="img-product row center">
@@ -68,7 +64,7 @@
                         <h3><?= $player['price']?> M €</h3>
 
                         <?php if(isset($_SESSION['user']) && $_SESSION['user']['is_admin']==0): ?>
-                            <button class="add-to-cart ">+</button>
+                            <button onclick="window.location.href='./index.php?p=cart&action=new&id=<?= $player['id'] ?>'" class="add-to-cart ">+</button>
                         <?php endif; ?>  
                         <a href="index.php?p=mercato&action=playerSelected&id=<?= $player['id'] ?>" class="btn-see">
                             voir plus

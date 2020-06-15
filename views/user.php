@@ -13,8 +13,12 @@
 
     <?php
         if(isset($_GET['action']) && $_GET['action'] == 'in'){
-            $players = getPlayersByClub($_SESSION['user']['club_id']);
+            $playersUser = getPlayersByClub($_SESSION['user']['club_id']);
+            $postes = getAllPostes();
+            $players = getAllPlayers();
             $club = getClub($_SESSION['user']['club_id']);
+            $playersFromCart = $_SESSION['cart'];
+            
             require ('partials/userPage.php');
         }
         elseif(isset($_GET['action']) && $_GET['action'] == 'signUp'){

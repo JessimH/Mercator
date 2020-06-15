@@ -3,6 +3,7 @@ require('models/Players.php');
 require('models/Postes.php');
 require('models/Users.php');
 require('models/Clubs.php');
+require('models/Cart.php');
 
 $clubs = getAllClubs();
 $users = getAllUsers();
@@ -11,6 +12,10 @@ switch ($_GET['action']){
     
     case 'list' :
         $users = getAllUsers();
+        $postes = getAllPostes();
+        $playersFromCart = $_SESSION['cart'];
+
+    
         require('views/user.php');
         break;
 
@@ -92,6 +97,7 @@ switch ($_GET['action']){
 
     case 'getOut' :
         unset($_SESSION['user']);
+        unset($_SESSION['cart']);
         header('Location:index.php?p=user&action=signIn');
         exit;
         break;

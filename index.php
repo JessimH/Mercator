@@ -1,5 +1,11 @@
 <?php
+
 session_start();
+
+if(!isset($_SESSION['cart'])){
+    $_SESSION['cart'] = [];
+}
+
 require('helpers.php');
 
 if(isset($_GET['p'])):
@@ -10,6 +16,10 @@ if(isset($_GET['p'])):
         
         case 'achat' :
             require 'controllers/achatController.php';
+            break;
+
+        case 'cart' :
+            require 'controllers/cartController.php';
             break;
 
         case 'club' :

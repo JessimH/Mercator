@@ -115,6 +115,7 @@ function connectUser()
 
     if($user != false){
         $_SESSION['user'] = [
+            'id' => $user['id'],
             'username' => $user['username'],
             'club_id' => $user['club_id'],
             'email' => $user['email'],

@@ -4,6 +4,7 @@ require('models/Players.php');
 require('models/Postes.php');
 require('models/Users.php');
 require('models/Clubs.php');
+require('models/Cart.php');
 
 switch ($_GET['action']){
     case 'list' :
@@ -125,5 +126,5 @@ switch ($_GET['action']){
    
     
     default :
-        require 'controllers/indexController.php';
+    require 'controllers/404Controller.php';
 }

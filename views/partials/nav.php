@@ -4,7 +4,7 @@
     <?php elseif(isset($_SESSION['user'])&& $_SESSION['user']['is_admin']==0) :?>
         <?php foreach($clubs as $club) :?>
             <?php if($club['id']==$_SESSION['user']['club_id']):?>
-                <p class="logo"><a class="row center" href="index.php?p=index">Mercator.</a></p>
+                <p class="logo"><a class="row center" href="index.php?p=index">Mercator. <img width="40" height="40" src="assets/images/clubs/<?= $club['image'] ?>" alt="<?= $club['name'] ?>"></a></p>
             <?php endif; ?>
         <?php endforeach; ?>
     <?php else: ?>
@@ -23,8 +23,9 @@
             <?php if(isset($_SESSION['user'])&& $_SESSION['user']['is_admin']==0) :?>
                 <?php foreach($clubs as $club) :?>
                     <?php if($club['id']==$_SESSION['user']['club_id']):?>
-                        <a href="index.php?p=user&action=in">
-                            <img width="40" height="40" src="assets/images/clubs/<?= $club['image'] ?>" alt="<?= $club['name'] ?>">
+                        <a class="row center" href="index.php?p=user&action=in">
+                            <p><?php echo count($_SESSION['cart']); ?></p>
+                            <p style="font-size: 25px;" class="row center notif"><i class="fa fa-shopping-cart" aria-hidden="true"></i></p>
                         </a>
                     <?php endif; ?>
                 <?php endforeach; ?>

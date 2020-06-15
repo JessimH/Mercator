@@ -45,7 +45,7 @@
                         </div>
                     <?php endforeach; ?>
                     <?php else:?>
-                    <?php foreach ($players as $player) :?>
+                    <?php foreach ($playersUser as $player) :?>
                         <div class="row center product-cart" style="justify-content: space-between;">
                             <h3><?= $player['name'] ?></h3>
                             <h3><?= $player['price'] ?>M</h3>
@@ -66,7 +66,8 @@
         </div>
     </div>
 
-    <div class="col user-cart">
+    <div class="col player-list">
+        <div class="col user-cart">
         <?php if($_SESSION['user']['is_admin'] == 1):?>
             <div class="col cart-title">
                 <h2>Liste des utilisateurs</h2>
@@ -103,19 +104,36 @@
             <div class="col cart-content">
                 <ul>
                     <li>
-                        <div class="row center product-cart">
-                            <h3>NOM DE FAMILLE</h3>
-                            <h3>A</h3>
-                            <button class="btn-see">Club</button>
-                            <button class="supp-from-cart">-</button>
-                        </div>
+                        <?php foreach($playersFromCart as $cartPlayer):?>
+                            <?php foreach($clubs as $club) :?>
+                                <?php foreach($players as $player) :?>
+                                    <?php if($player['id'] == $cartPlayer['id']) :?>
+                                        <?php if($club['id'] == $player['id_club']) :?>
+                                            <div class="row center product-cart">
+                                                <img style="margin-right: 10px;" src="assets/images/clubs/<?= $club['image']?>" width="25" height="25" alt="icon Club" class="icon">
+                                                <h3><?= $player['name']?></h3>
+                                                <?php foreach($postes as $poste) :?>
+                                                    <?php if($poste['id'] == $player['post_id']):?>
+                                                        <h3><?= $poste['name'] ?></h3>
+                                                    <?php endif;?>
+                                                <?php endforeach;?>
+                                                <h3><?= $player['price']?> M</h3>
+                                                <button onclick="window.location.href='./index.php?p=cart&action=del&id=<?= $player['id'] ?>'" class="supp-from-cart">-</button>
+                                            </div>
+                                        <?php endif;?>
+                                    <?php endif;?>   
+                                <?php endforeach;?>
+                            <?php endforeach;?>
+                        <?php endforeach;?>
                     </li>
                 </ul>
             </div>
             <div class="col cart-buy center">
-                <button class=" btn-buy ">Contactez tous les Clubs</button>
+                <button onclick="window.location.href='./index.php?p=achat'" class=" btn-buy ">Contactez tous les Clubs</button>
             </div>
         <?php endif; ?>
     </div>
+    </div>
+    
 
 </section>

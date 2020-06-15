@@ -3,6 +3,7 @@ require('models/Players.php');
 require('models/Postes.php');
 require('models/Users.php');
 require('models/Clubs.php');
+require('models/Cart.php');
 
 $clubs = getAllClubs();
 $users = getAllUsers();
@@ -15,6 +16,9 @@ switch ($_GET['action']){
         if(empty($player)){
             header('Location:index.php?p=404');
         }
+        $postes = getAllPostes();
+
+        $playersFromCart = $_SESSION['cart'];
         
         require('views/player.php');
         break;
@@ -22,6 +26,9 @@ switch ($_GET['action']){
 
     case 'list' :
         $players = getAllPlayers();
+        $postes = getAllPostes();
+        $playersFromCart = $_SESSION['cart'];
+
         require('views/user.php');
         break;
 
@@ -156,5 +163,5 @@ switch ($_GET['action']){
    
     
     default :
-        require 'controllers/indexController.php';
+        require 'controllers/404Controller.php';
 }
