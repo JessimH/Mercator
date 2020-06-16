@@ -61,9 +61,8 @@ h3 {
 /*NAV*/
 
 nav {
-    max-width: 100%;
-    top: 0;
     position: fixed;
+    top: 0;
     z-index: 999;
     background-color: white;
     width: 100%;
@@ -92,7 +91,7 @@ nav {
         justify-content: space-evenly;
         margin-left: 350px;
         li {
-            margin-left: 35px;
+            margin-left: 50px;
             a {
                 color: $base-color;
                 text-decoration: none;
@@ -268,17 +267,6 @@ nav {
     }
 }
 
-.notif {
-    background-color: transparent;
-    color: $base-color;
-    margin-right: 5px;
-    @extend .supp-from-cart;
-    padding: 2px;
-    &:hover {
-        animation: none;
-    }
-}
-
 .content {
     width: 100%;
     margin-top: 130px;
@@ -286,6 +274,7 @@ nav {
 
 .categories {
     width: 100%;
+    padding-left: 400px;
     .categories-ul {
         border: 2px solid $base-color;
         max-width: 450px;
@@ -357,7 +346,7 @@ nav {
         }
     }
     .cart-content {
-        margin-top: 70px;
+        margin-top: 90px;
         li {
             margin-bottom: 20px;
         }
@@ -365,9 +354,8 @@ nav {
 }
 
 .product-list {
-    margin: 50px;
-    margin-bottom: 20px;
-    width: 100%;
+    margin-left: 460px;
+    width: 70%;
 }
 
 .product-template {
@@ -407,14 +395,14 @@ nav {
     background-position: bottom right;
     background-size: 25rem;
     width: 100%;
-    height: 84.5vh;
-    margin-left: 50px;
+    height: 83.5vh;
+    margin-left: 600px;
     h1 {
         font-size: 6em;
         margin-bottom: 20px;
     }
     h2 {
-        padding-right: 700px;
+        padding-right: 400px;
         font-size: 1.5em;
         margin-bottom: 20px;
     }

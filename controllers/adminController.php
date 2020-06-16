@@ -44,7 +44,7 @@ switch ($_GET['action']){
 
         }
         else{
-            $resultAdd = addUser($_POST);
+            $resultAdd = addUserAdmin($_POST);
             if($resultAdd){
                 $_SESSION['messages'][] = 'Utilisateur ajouté !';
             }

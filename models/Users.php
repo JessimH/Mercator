@@ -70,6 +70,31 @@ function addUser ()
     }
 }
 
+function addUserAdmin ()
+{
+    $db = dbConnect();
+
+    $emailUsed = isUsernameUsed();
+
+    if(!$emailUsed){
+        $query = $db->prepare('INSERT INTO users (username, password, email, club_id, adress) VALUES (?, ?, ?, ?, ?)');
+        $result = $query->execute(
+            [
+                $_POST['username'],
+                hash('md5', $_POST['password']),
+                $_POST['email'],
+                $_POST['club_id'],
+                $_POST['adress'],
+            ]
+        );
+        
+        return $result;
+    }
+    else {
+        return false;
+    }
+}
+
 function updateUser($id, $informations)
 {
     $db = dbConnect();

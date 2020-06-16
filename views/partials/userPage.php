@@ -36,60 +36,61 @@
         <div class="col cart-content">
             <ul>
                 <li>
-                    <?php if($_SESSION['user']['is_admin']== 1) :?>
-                        <?php foreach ($clubs as $club) :?>
-                            <div class="row center product-cart" style="justify-content: space-between;">
-                                <h3><?= $club['name'] ?></h3>
-                                <button onclick="window.location.href='./index.php?p=club&action=edit&id=<?= $club['id'] ?>'" class="btn-update">update</button>
-                                <button onclick="window.location.href='./index.php?p=club&action=delete&id=<?= $club['id'] ?>'" class="supp-from-cart">-</button>
-                            </div>
-                        <?php endforeach; ?>
+                <?php if($_SESSION['user']['is_admin']== 1) :?>
+                    <?php foreach ($clubs as $club) :?>
+                        <div class="row center product-cart" style="justify-content: space-between; margin-bottom: 20px;">
+                            <h3><?= $club['name'] ?></h3>
+                            <button onclick="window.location.href='./index.php?p=club&action=edit&id=<?= $club['id'] ?>'" class="btn-update">update</button>
+                            <button onclick="window.location.href='./index.php?p=club&action=delete&id=<?= $club['id'] ?>'" class="supp-from-cart">-</button>
+                        </div>
+                    <?php endforeach; ?>
                     <?php else:?>
-                        <?php foreach ($playersUser as $player) :?>
-                            <div class="row center product-cart" style="justify-content: space-between;">
-                                <h3><?= $player['name'] ?></h3>
-                                <h3><?= $player['price'] ?>M</h3>
-                                <button onclick="window.location.href='./index.php?p=player&action=edit&id=<?= $player['id'] ?>'" class="btn-update">update</button>
-                                <button onclick="window.location.href='./index.php?p=player&action=delete&id=<?= $player['id'] ?>'" class="supp-from-cart">-</button>
-                            </div>
-                        <?php endforeach; ?>
-                    <?php endif;?>
+                    <?php foreach ($players as $player) :?>
+                        <?php if($player['id_club'] == $_SESSION['user']['club_id']) :?>
+                        <div class="row center product-cart" style="justify-content: space-between;  margin-bottom: 20px;">
+                            <h3><?= $player['name'] ?></h3>
+                            <h3><?= $player['price'] ?>M</h3>
+                            <button onclick="window.location.href='./index.php?p=player&action=edit&id=<?= $player['id'] ?>'" class="btn-update">update</button>
+                            <button onclick="window.location.href='./index.php?p=player&action=delete&id=<?= $player['id'] ?>'" class="supp-from-cart">-</button>
+                        </div>
+                        <?php endif;?>
+                    <?php endforeach; ?>
+                <?php endif;?>
                 </li>
             </ul>
         </div>
         <div class="col cart-buy center">
         <?php if($_SESSION['user']['is_admin']== 1) :?>
-            <button onclick="window.location.href='./index.php?p=club&action=new'" class="btn-buy">Ajouter un club</button>
-        <?php else:?>
-            <button onclick="window.location.href='./index.php?p=player&action=new'" class="btn-buy">Ajouter un joueur</button>
+                <button onclick="window.location.href='./index.php?p=club&action=new'" class="btn-buy">Ajouter un club</button>
+            <?php else:?>
+                <button onclick="window.location.href='./index.php?p=player&action=new'" class="btn-buy">Ajouter un joueur</button>
         <?php endif;?>
         </div>
     </div>
 
-    <div class="col player-list">
-        <div class="col user-cart">
-            <?php if($_SESSION['user']['is_admin'] == 1):?>
-                <div class="col cart-title">
-                    <h2>Liste des utilisateurs</h2>
-                    <h2>1 = admin</h2>
-                    <hr>
-                </div>
+    <div class="col user-cart">
+        <?php if($_SESSION['user']['is_admin'] == 1):?>
+            <div class="col cart-title">
+                <h2>Liste des utilisateurs</h2>
+                <h2>1 = admin</h2>
+                <hr>
+            </div>
             <div class="col cart-content">
                 <ul>
                     <li>
-                        <?php foreach ($users as $user) :?>
-                            <div class="row center product-cart" style="justify-content: space-between;">
-                                <h3><?= $user['is_admin'] ?></h3>
-                                <h3><?= $user['username'] ?></h3>
-                                <?php foreach ($clubs as $club) :?>
-                                    <?php if($club['id'] == $user['club_id']) :?>
-                                        <h3><?= $club['abbreviation'] ?></h3>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                                <button onclick="window.location.href='./index.php?p=admin&action=edit&id=<?= $user['id'] ?>'" class="btn-update">update</button>
-                                <button onclick="window.location.href='./index.php?p=admin&action=delete&id=<?= $user['id'] ?>'" class="supp-from-cart">-</button>
-                            </div>
-                        <?php endforeach; ?>
+                    <?php foreach ($users as $user) :?>
+                        <div class="row center product-cart" style="justify-content: space-between;  margin-bottom: 20px;">
+                            <h3><?= $user['is_admin'] ?></h3>
+                            <h3><?= $user['username'] ?></h3>
+                            <?php foreach ($clubs as $club) :?>
+                                <?php if($club['id'] == $user['club_id']) :?>
+                                    <h3><?= $club['abbreviation'] ?></h3>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                            <button onclick="window.location.href='./index.php?p=admin&action=edit&id=<?= $user['id'] ?>'" class="btn-update">update</button>
+                            <button onclick="window.location.href='./index.php?p=admin&action=delete&id=<?= $user['id'] ?>'" class="supp-from-cart">-</button>
+                        </div>
+                    <?php endforeach; ?>
                     </li>
                 </ul>
             </div>
@@ -109,7 +110,7 @@
                                 <?php foreach($players as $player) :?>
                                     <?php if($player['id'] == $cartPlayer['id']) :?>
                                         <?php if($club['id'] == $player['id_club']) :?>
-                                            <div class="row center product-cart">
+                                            <div class="row center product-cart" style="justify-content: space-between;  margin-bottom: 20px;">
                                                 <img style="margin-right: 10px;" src="assets/images/clubs/<?= $club['image']?>" width="25" height="25" alt="icon Club" class="icon">
                                                 <h3><?= $player['name']?></h3>
                                                 <?php foreach($postes as $poste) :?>
@@ -118,7 +119,7 @@
                                                     <?php endif;?>
                                                 <?php endforeach;?>
                                                 <h3><?= $player['price']?> M</h3>
-                                                <button onclick="window.location.href='./index.php?p=cart&action=del&id=<?= $player['id'] ?>'" class="supp-from-cart">-</button>
+                                                <button onclick="window.location.href='./index.php?p=cart&action=del&id=<?= $player['id'] ?>'"class="supp-from-cart">-</button>
                                             </div>
                                         <?php endif;?>
                                     <?php endif;?>   

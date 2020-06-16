@@ -422,7 +422,7 @@ nav ul li a:hover {
 }
 
 .cart .cart-content {
-  margin-top: 70px;
+  margin-top: 90px;
 }
 
 .cart .cart-content li {
@@ -790,10 +790,6 @@ nav ul li a:hover {
 .btn-deco:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.product-cart {
-  margin-bottom: 20px;
 }
 
 .message {

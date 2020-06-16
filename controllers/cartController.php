@@ -49,10 +49,13 @@ if(isset($_GET['action'])) {
         break;
 
         case 'del' :
-            
-            $playersFromCart = deleteFromCart($_GET['id']);
 
-            header('Location:index.php?p=user&action=in&id='.$_GET['id']);
+            $key = array_search($_GET['id'], array_column($_SESSION['cart'], 'id'));
+
+            unset($_SESSION['cart'][$key]);
+
+            sort($_SESSION['cart']);
+            header('Location:index.php?p=user&action=in');
         break;
 
         default :
