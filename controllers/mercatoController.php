@@ -18,6 +18,7 @@ switch ($_GET['action']){
     case 'list';
         $players = getAllPlayers();
         $postes = getAllPostes();
+        $clubs = getAllClubs();
         $playersFromCart = $_SESSION['cart'];
 
     break;

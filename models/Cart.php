@@ -16,5 +16,19 @@ function addToCart($id){
         'id' => $playerChoice['id'],
         'quantity' => $playerChoice['quantity'],
     ];
+
+ }
+
+ function deleteFromCart($id)
+ {
+    $playersFromCart = $_SESSION['cart'];
+
+    $key = array_search($id, array_column($playersFromCart, 'id'));
+    
+    unset($playersFromCart[$key]);
+
+    sort($playersFromCart);
+
+    return $playersFromCart;
  }
 

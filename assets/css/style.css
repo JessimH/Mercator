@@ -54,8 +54,8 @@ h3 {
 /*NAV*/
 nav {
   max-width: 100%;
-  position: fixed;
   top: 0;
+  position: fixed;
   z-index: 999;
   background-color: white;
   width: 100%;
@@ -431,6 +431,7 @@ nav ul li a:hover {
 
 .product-list {
   margin: 50px;
+  margin-bottom: 20px;
   width: 100%;
 }
 

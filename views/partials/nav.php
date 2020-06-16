@@ -1,3 +1,4 @@
+
 <nav>
     <?php if(isset($_SESSION['user'])&& $_SESSION['user']['is_admin']==1) :?>
         <p class="logo"><a href="index.php?p=index">Mercator.<span style="color: red;">admin</span></a></p>
@@ -42,7 +43,12 @@
             <?php endif; ?>
         </li>
     </ul>
-</nav>
+</nav> 
+
+
+
+
+
 
 <?php if(isset($_SESSION['messages'])): ?>
         <div class="message">

@@ -27,7 +27,8 @@
         elseif(isset($_GET['action']) && $_GET['action'] == 'signIn'){
             require ('partials/signIn.php');
         }
-    ?>     
+    ?>   
+
 
 </body>
 

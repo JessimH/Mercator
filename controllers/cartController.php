@@ -44,19 +44,15 @@ if(isset($_GET['action'])) {
         case 'new' :
             $playersFromCart = $_SESSION['cart'];
             $playerCart = addToCart($_GET['id']);
+           
             header('Location:index.php?p=cart&action=list');
         break;
 
         case 'del' :
-            $playersFromCart = $_SESSION['cart'];
-
-            $key = array_search($_GET['id'], array_column($playersFromCart, 'id'));
             
-            unset($playersFromCart[$key]);
+            $playersFromCart = deleteFromCart($_GET['id']);
 
-            sort($playersFromCart);
-
-            header('Location:index.php?p=user&action=in');
+            header('Location:index.php?p=user&action=in&id='.$_GET['id']);
         break;
 
         default :
