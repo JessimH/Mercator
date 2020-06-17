@@ -11,9 +11,9 @@
         <p class="logo"><a href="index.php?p=index">Mercator.</a></p>
     <?php endif; ?>
     <ul>
-        <li><a href="index.php?p=index">Accueil</a></li>
-        <li><a href="index.php?p=mercato&action=list">Mercato</a></li>
-        <li><a href="index.php?p=a-propos">À Propos</a></li>
+        <li><a class="menu" href="index.php?p=index">Accueil</a></li>
+        <li><a class="menu" href="index.php?p=mercato&action=list">Mercato</a></li>
+        <li><a class="menu" href="index.php?p=a-propos">À Propos</a></li>
         <li><form action="index.php?p=player&action=search" class="row center" method="post">
                 <input class="searchbar" type="search" name="search" placeholder="Rechercher un joueur">
                 <input style="opacity: 0;" type="submit" value="ok">
