@@ -5,7 +5,7 @@
     require ('partials/meta.php');
 ?>
 
-<body class="index">
+<body id="body" class="index">
    <?php
    require ('partials/nav.php');
    ?>
@@ -21,7 +21,6 @@
             <?php endif;?>
 
         </div>
-
     </section>
     
 </body>

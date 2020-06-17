@@ -5,7 +5,7 @@
     require ('partials/meta.php')
 ?>
 
-<body>
+<body id="body">
 
     <?php require ('partials/nav.php') ?>
 

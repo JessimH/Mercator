@@ -5,7 +5,7 @@
     require ('partials/meta.php')
 ?>
 
-<body class="a-propos">
+<body id="body" class="a-propos">
     <?php 
         require ('partials/nav.php')
     ?>

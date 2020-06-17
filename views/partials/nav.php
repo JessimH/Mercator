@@ -1,5 +1,4 @@
-
-<nav>
+<nav id="nav">
     <?php if(isset($_SESSION['user'])&& $_SESSION['user']['is_admin']==1) :?>
         <p class="logo"><a href="index.php?p=index">Mercator.<span style="color: red;">admin</span></a></p>
     <?php elseif(isset($_SESSION['user'])&& $_SESSION['user']['is_admin']==0) :?>
@@ -42,8 +41,20 @@
                 <a href="index.php?p=user&action=signIn"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
             <?php endif; ?>
         </li>
+        <li>
+            <div id="burger" onclick="toggle()"><i class="fa fa-bars burger" aria-hidden="true"></i></div>
+        </li>
     </ul>
 </nav> 
+
+<div id="navigation">
+    <div id="burger" onclick="toggle()"><i class="fas fa-times"></i></div>
+    <ul>
+        <li><a href="index.php?p=index">Accueil</a></li>
+        <li><a href="index.php?p=mercato&action=list">Mercato</a></li>
+        <li><a href="index.php?p=a-propos">À Propos</a></li>
+    </ul>
+</div>
 
 
 
