@@ -21,6 +21,7 @@ switch ($_GET['action']){
         $clubs = getAllClubs();
         $playersFromCart = $_SESSION['cart'];
 
+
     break;
 
     case 'clubId';
@@ -29,6 +30,7 @@ switch ($_GET['action']){
         $postes = getAllPostes();
         $playersFromCart = $_SESSION['cart'];
 
+
     break;
 
     case 'postId';
@@ -36,6 +38,7 @@ switch ($_GET['action']){
         $players = getPlayersByPostes($poste['id']);
         $playerPoste = $poste['name'];
         $playersFromCart = $_SESSION['cart'];
+
   
     break;  
 
@@ -43,6 +46,7 @@ switch ($_GET['action']){
         $player = getPlayer($_GET['id']); 
         $postes = getAllPostes();
         $playersFromCart = $_SESSION['cart'];
+
 
         require('views/player.php');
         exit;  

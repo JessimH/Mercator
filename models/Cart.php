@@ -19,5 +19,12 @@ function addToCart($id){
 
  }
 
+ function OnecartPlayer(){
+    $playersFromCart = $_SESSION['cart'];
+     foreach( $playersFromCart as $oneCartPlayer){
+         return $oneCartPlayer;
+     }
+ }
+
 
 

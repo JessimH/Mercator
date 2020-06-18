@@ -28,7 +28,7 @@
                 <?php foreach ($postes as $poste) :?>
                     <li class="row center ">
                         <a id="cat" href='index.php?p=mercato&action=postId&id=<?= $poste['id'] ?>' >
-                            <?= $poste['name'] ?>
+                            <?= htmlentities($poste['name']) ?>
                         </a>
                     </li>
                 <?php endforeach; ?>
@@ -49,11 +49,12 @@
                         <?php endforeach;?>
                     <?php endif; ?>
                     <div class="product-name ">
-                        <h3><?= $player['name'] ?></h3>
+                        <h3><?= htmlentities($player['name']) ?></h3>
+                        <h3> - </h3>
                         <?php if($_GET['action']=='list' || $_GET['action']=='clubId' ) :?>
                             <?php foreach($postes as $poste) :?>
                                 <?php if($poste['id'] == $player['post_id']) :?>
-                                    <h3><?= $poste['name'] ?></h3>
+                                    <h3><?= htmlentities($poste['name']) ?></h3>
                                 <?php endif;?>
                             <?php endforeach;?>
                         <?php else: ?>
@@ -61,12 +62,16 @@
                         <?php endif; ?>
                     </div>
                     <div class="product-price ">
-                        <h3><?= $player['price']?> M €</h3>
+                        <h3><?= htmlentities($player['price'])?> M €</h3>
 
                         <?php if(isset($_SESSION['user']) && $_SESSION['user']['is_admin']==0): ?>
-                            <button id="check" style="display: none;" <?php if( $player['id_club'] == $_SESSION['user']['club_id']):?> style="display: none;" <?php endif;?> class="check"><i class="fa fa-check" aria-hidden="true"></i></button>
-                            <button id="btn" <?php if( $player['id_club'] == $_SESSION['user']['club_id']):?> style="display: none;" <?php endif;?> onclick="window.location.href='./index.php?p=cart&action=new&id=<?= $player['id'] ?>';" class="add-to-cart ">+</button>
-                        <?php endif; ?>  
+                            <?php $key = array_search($player['id'], array_column($_SESSION['cart'], 'id')); ?>
+                            <?php if(isset($_SESSION['cart'][$key]) && $_SESSION['cart'][$key]['id'] == $player['id']) :?>
+                                <button id="check" class="check"><i class="fa fa-check" aria-hidden="true"></i></button>
+                            <?php else :?>
+                                <button id="add" <?php if( $player['id_club'] == $_SESSION['user']['club_id']):?> style="display: none;" <?php endif;?> onclick="window.location.href='./index.php?p=cart&action=new&id=<?= $player['id'] ?>'" class="add-to-cart ">+</button>
+                            <?php endif; ?>
+                        <?php endif; ?>    
                         <a href="index.php?p=mercato&action=playerSelected&id=<?= $player['id'] ?>" class="btn-see">
                             voir plus
                         </a>
