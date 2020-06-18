@@ -10,7 +10,7 @@
     require ('partials/nav.php')
     ?>
 
-    <section class="row content">
+    <section class="row center content">
 
         <section id="up" class="row center categories ">
             <ul class="row categories-ul">
