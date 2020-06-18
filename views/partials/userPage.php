@@ -130,7 +130,9 @@
                 </ul>
             </div>
             <div class="col cart-buy center">
-                <button onclick="window.location.href='./index.php?p=achat'" class=" btn-buy ">Contactez tous les Clubs</button>
+                <?php if(count($_SESSION['cart']) > 0) :?></p>
+                    <button onclick="window.location.href='./index.php?p=achat'" class=" btn-buy ">Contactez tous les Clubs</button>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
     </div>

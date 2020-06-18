@@ -64,7 +64,8 @@
                         <h3><?= $player['price']?> M €</h3>
 
                         <?php if(isset($_SESSION['user']) && $_SESSION['user']['is_admin']==0): ?>
-                            <button <?php if( $player['id_club'] == $_SESSION['user']['club_id']):?> style="display: none;" <?php endif;?> onclick="window.location.href='./index.php?p=cart&action=new&id=<?= $player['id'] ?>'" class="add-to-cart ">+</button>
+                            <button id="check" style="display: none;" <?php if( $player['id_club'] == $_SESSION['user']['club_id']):?> style="display: none;" <?php endif;?> class="check"><i class="fa fa-check" aria-hidden="true"></i></button>
+                            <button id="btn" <?php if( $player['id_club'] == $_SESSION['user']['club_id']):?> style="display: none;" <?php endif;?> onclick="window.location.href='./index.php?p=cart&action=new&id=<?= $player['id'] ?>';" class="add-to-cart ">+</button>
                         <?php endif; ?>  
                         <a href="index.php?p=mercato&action=playerSelected&id=<?= $player['id'] ?>" class="btn-see">
                             voir plus

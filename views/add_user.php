@@ -16,7 +16,7 @@
 
             <h2>Formulaire de l'Utilisateur :</h2>
             <label for="username">Username : </label>
-            <input  type="text" name="username" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['username'] : '' ?><?= isset($user) ? $user['username'] : '' ?>"/>
+            <input  type="text" name="username" placeholder="username" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['username'] : '' ?><?= isset($user) ? $user['username'] : '' ?>"/>
 
             <label for="is_admin">Admin :</label>
             <div class="col center"> 
@@ -42,7 +42,7 @@
                 <input type="text" name="adress" placeholder="Adresse du club">
             <?php endif;?>
 
-            <label for="club">CLub :</label>
+            <label for="club">Club :</label>
             <select name="club_id" id="pet-id_club">
                 <?php foreach ($clubs as $club): ?>
                     <option value="<?= $club['id']?>"<?php if(isset($_SESSION['user']) && $_SESSION['user']['club_id'] == $club['id']): ?>selected="selected"<?php endif; ?>><?= $club['name']?></option>
