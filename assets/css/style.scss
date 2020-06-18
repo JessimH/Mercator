@@ -165,6 +165,11 @@ nav {
     }
 }
 
+#up {
+    position: absolute;
+    top: 0;
+}
+
 .up {
     position: fixed;
     top: 700px;
@@ -289,10 +294,12 @@ nav {
     width: 100%;
     .categories-ul {
         border: 2px solid $base-color;
+        height: 100px;
         max-width: 450px;
         border-radius: 50px;
         margin-right: 20px;
         display: flex;
+        align-items: center;
         flex-wrap: nowrap;
         overflow-x: scroll;
         li {
@@ -315,7 +322,7 @@ nav {
                     margin: 0px;
                 }
                 .icon {
-                    margin: 10px;
+                    margin: 0px;
                     height: 30px;
                     width: 30px;
                 }

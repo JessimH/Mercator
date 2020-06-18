@@ -9,10 +9,20 @@
     <?php 
     require ('partials/nav.php')
     ?>
-
+    <span id="up" ></span>
     <section class="row center content">
 
-        <section id="up" class="row center categories ">
+        <section class="row center categories ">
+            <ul class="row categories-ul ">
+                <li class="row center all"><a id="cat" href='index.php?p=mercato&action=list'>ALL</a></li>
+                    <?php foreach ($clubs as $club) :?>
+                    <li class="row center">
+                        <a id="cat" href='index.php?p=mercato&action=clubId&id=<?= $club['id'] ?>'>
+                            <img src="assets/images/clubs/<?= $club['image']?>" alt="<?= $club['abbreviation'] ?>" class="icon ">
+                        </a>
+                    </li>
+                <?php endforeach; ?>    
+            </ul>
             <ul class="row categories-ul">
                 <li class="row center all"><a id="cat" href='index.php?p=mercato&action=list'>ALL</a></li>
                 <?php foreach ($postes as $poste) :?>
@@ -22,16 +32,6 @@
                         </a>
                     </li>
                 <?php endforeach; ?>
-            </ul>
-            <ul class="row categories-ul ">
-            <li class="row center all"><a id="cat" href='index.php?p=mercato&action=list'>ALL</a></li>
-                <?php foreach ($clubs as $club) :?>
-                    <li class="row center">
-                        <a id="cat" href='index.php?p=mercato&action=clubId&id=<?= $club['id'] ?>'>
-                            <img src="assets/images/clubs/<?= $club['image']?>" alt="<?= $club['abbreviation'] ?>" class="icon ">
-                        </a>
-                    </li>
-                <?php endforeach; ?>    
             </ul>
         </section>
 
