@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de données :  `Mercator`
@@ -31,7 +31,7 @@ CREATE TABLE `clubs` (
   `name` varchar(255) NOT NULL,
   `abbreviation` tinytext,
   `image` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `clubs`
@@ -54,7 +54,7 @@ CREATE TABLE `orders` (
   `username` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `club_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `orders`
@@ -76,7 +76,7 @@ CREATE TABLE `order_details` (
   `price` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `order_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `order_details`
@@ -107,7 +107,7 @@ CREATE TABLE `players` (
   `quantity` int(11) NOT NULL DEFAULT '1',
   `image` varchar(255) DEFAULT NULL,
   `image_desc` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `players`
@@ -152,7 +152,7 @@ INSERT INTO `players` (`id`, `id_club`, `name`, `price`, `created_at`, `descript
 CREATE TABLE `postes` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `postes`
@@ -178,7 +178,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `is_admin` tinyint(4) DEFAULT '0',
   `adress` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
