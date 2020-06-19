@@ -134,7 +134,7 @@
             </div>
             <div class="col cart-buy center">
                 <?php if(count($_SESSION['cart']) > 0) :?></p>
-                <button onclick="window.location.href='./index.php?p=cart&action=confirm'" class=" btn-buy "><?php if(count($_SESSION['cart']) > 1) :?>Contactez tous les Clubs<?php else: ?>Contactez le Club<?php endif; ?></button>
+                <button onclick="window.location.href='./index.php?p=cart&action=confirm'" class=" btn-buy "><?php if(count($_SESSION['cart']) > 1) :?>Contactez tous les Clubs<?php else: ?>Contacter le Club<?php endif; ?></button>
                 <?php endif; ?>
             </div>
         <?php endif; ?>
