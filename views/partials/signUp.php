@@ -25,5 +25,4 @@
 
         </form>
     </div>
-    <img class="user-form-img2" src="assets/images/kimpembe2.png" alt="Kimpembe">
 </section>

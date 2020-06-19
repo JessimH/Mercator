@@ -17,5 +17,4 @@
         </form>
 
     </div>
-    <img class="user-form-img" src="assets/images/Pogba2.png" alt="Pogba">
 </section>
