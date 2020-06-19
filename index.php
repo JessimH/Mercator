@@ -34,10 +34,6 @@ if(isset($_GET['p'])):
             require 'controllers/mercatoController.php';
             break;
 
-        case 'a-propos' :
-            require 'controllers/a_proposController.php';
-            break;
-
         case 'index' :
             require 'controllers/indexController.php';
             break;

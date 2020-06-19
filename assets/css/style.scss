@@ -680,17 +680,6 @@ nav {
     color: white;
 }
 
-.a-propos {
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: cover;
-    line-height: 3em;
-    h2 {
-        padding: 20px;
-        font-size: 2em;
-    }
-}
-
 .add-player {
     height: 100vh;
     width: 100vw;
@@ -780,6 +769,7 @@ nav {
     .categories {
         width: 90%;
         .categories-ul {
+            height: 100%;
             border: 2px solid $base-color;
             max-width: 450px;
             border-radius: 50px;
