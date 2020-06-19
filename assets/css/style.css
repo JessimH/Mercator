@@ -1500,5 +1500,23 @@ nav ul li .burger {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+  .categories {
+    width: 100%;
+  }
+  .categories .categories-ul {
+    border: 2px solid #006AF8;
+    max-width: 450px;
+    border-radius: 50px;
+    margin-right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
 }
 /*# sourceMappingURL=style.css.map */
