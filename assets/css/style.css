@@ -33,6 +33,26 @@ button {
   margin-right: 10px;
 }
 
+.orders table {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.orders table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+.orders table tr td {
+  margin-right: 20px;
+}
+
 input {
   outline: none;
 }

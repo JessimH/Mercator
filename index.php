@@ -46,6 +46,14 @@ if(isset($_GET['p'])):
             require 'controllers/userController.php';
             break;
 
+        case 'orders' :
+            require 'controllers/ordersController.php';
+            break;
+
+        case 'details' :
+            require 'controllers/detailController.php';
+            break;
+
         case '404' :
             require 'controllers/404Controller.php';
             break;

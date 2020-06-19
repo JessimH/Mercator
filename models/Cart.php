@@ -39,6 +39,7 @@ function addToCart($id){
         ]
     );
 
+
     $_SESSION['order_id'] = $db->lastInsertId();
     return $result;
  }
@@ -74,8 +75,33 @@ function orderDetails(){
     } 
     return $result; 
     };
-    
 }
+
+function getOrders(){
+    $db = dbConnect();
+
+    $query = $db->query('SELECT * FROM orders ORDER by id');
+	$orders =  $query->fetchAll();
+
+	return $orders;
+}
+
+function getOrderDetails($id)
+{
+    $db = dbConnect();
+
+    $query = $db->prepare('SELECT * FROM order_details WHERE order_id = ?');
+    $query->execute(
+		[
+        	$id
+		]
+	);
+
+    $result =  $query->fetchAll();
+
+    return $result;
+}
+
 
 
 

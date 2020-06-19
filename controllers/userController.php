@@ -13,6 +13,8 @@ switch ($_GET['action']){
     case 'list' :
         $users = getAllUsers();
         $postes = getAllPostes();
+        $orders = getOrders();
+
         $playersFromCart = $_SESSION['cart'];
 
     

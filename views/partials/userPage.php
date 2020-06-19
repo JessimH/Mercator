@@ -21,6 +21,9 @@
                 <?php endforeach; ?>
             <?php endif;?>
             <a class="btn-deco" href="index.php?p=user&action=getOut">Deconnexion</a>
+            <?php if($_SESSION['user']['is_admin']== 1) :?>
+                <a class="btn-see" style="margin-top: 20px; margin-left: 20px;" href="index.php?p=orders">Commandes</a>
+            <?php endif;?>
         </div>
     </div>
 
