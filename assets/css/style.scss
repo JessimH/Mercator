@@ -1088,7 +1088,7 @@ nav {
                 box-shadow: inset $cart-shadow;
             }
             .cart-title {
-                position: absolute;
+                position: relative;
                 z-index: 444;
                 h2 {
                     font-size: 1.2rem;
@@ -1099,7 +1099,7 @@ nav {
                 }
             }
             .cart-content {
-                margin-top: 90px;
+                margin-top: 0px;
                 li {
                     margin-bottom: 20px;
                 }

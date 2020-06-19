@@ -1305,7 +1305,7 @@ nav ul li .burger {
             box-shadow: inset 0px 5px 27px #00000010;
   }
   .user .player-list .cart-title {
-    position: absolute;
+    position: relative;
     z-index: 444;
   }
   .user .player-list .cart-title h2 {
@@ -1316,7 +1316,7 @@ nav ul li .burger {
     margin: 20px;
   }
   .user .player-list .cart-content {
-    margin-top: 90px;
+    margin-top: 0px;
   }
   .user .player-list .cart-content li {
     margin-bottom: 20px;
