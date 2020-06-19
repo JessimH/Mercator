@@ -58,6 +58,15 @@ if(isset($_GET['action'])) {
             header('Location:index.php?p=user&action=in');
         break;
 
+        case 'confirm':
+
+            newOrder();
+            orderDetails();
+            unset($_SESSION['order_id']);
+            unset($_SESSION['cart']);
+            header('Location:index.php?p=achat');
+        break;
+
         default :
             require 'controllers/404Controller.php';
     }

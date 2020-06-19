@@ -8,4 +8,5 @@ require('models/Cart.php');
 $clubs = getAllClubs();
 $users = getAllUsers();
 
+
 include 'views/index.php';

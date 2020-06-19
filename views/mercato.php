@@ -67,7 +67,7 @@
                         <?php if(isset($_SESSION['user']) && $_SESSION['user']['is_admin']==0): ?>
                             <?php $key = array_search($player['id'], array_column($_SESSION['cart'], 'id')); ?>
                             <?php if(isset($_SESSION['cart'][$key]) && $_SESSION['cart'][$key]['id'] == $player['id']) :?>
-                                <button id="check" class="check"><i class="fa fa-check" aria-hidden="true"></i></button>
+                                <i class="fas fa-check-circle" style="color: #00B122; font-size: 2em;"></i>
                             <?php else :?>
                                 <button id="add" <?php if( $player['id_club'] == $_SESSION['user']['club_id']):?> style="display: none;" <?php endif;?> onclick="window.location.href='./index.php?p=cart&action=new&id=<?= $player['id'] ?>'" class="add-to-cart ">+</button>
                             <?php endif; ?>

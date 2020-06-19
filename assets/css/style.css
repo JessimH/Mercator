@@ -303,16 +303,6 @@ nav ul li .burger {
           animation: rotate-center 0.6s ease-in-out both;
 }
 
-.check {
-  background-color: #00B122;
-  border: none;
-  color: white;
-  font-size: 1em;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
 .supp-from-cart {
   background-color: #E80000;
   border: none;
