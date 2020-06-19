@@ -17,37 +17,39 @@
             <h2>Formulaire de l'Utilisateur :</h2>
             <label for="username">Username : </label>
             <input  type="text" name="username" placeholder="username" value="<?= isset($_SESSION['old_inputs']) ? $_SESSION['old_inputs']['username'] : '' ?><?= isset($user) ? $user['username'] : '' ?>"/>
+            
+            <?php if($_SESSION['user']['is_admin'] == 1) :?>
+                <label for="is_admin">Admin :</label>
+                <div class="col center"> 
+                    <div class="row center">
+                        <input type="radio" name="is_admin" value="1" 
+                            <?php if(isset($user) && $user['is_admin'] == 1): ?>
+                                checked
+                            <?php endif; ?>>
+                        <label for="no">Yes</label>
+                    </div> 
+                    <div class="row center">
+                        <input type="radio" name="is_admin" value="0"
+                            <?php if(isset($user) && $user['is_admin'] == 0): ?>
+                                checked
+                            <?php endif; ?>>
+                        <label for="no">No</label>
+                    </div>            
+                </div>
 
-            <label for="is_admin">Admin :</label>
-            <div class="col center"> 
-                <div class="row center">
-                    <input type="radio" name="is_admin" value="1" 
-                        <?php if(isset($user) && $user['is_admin'] == 1): ?>
-                            checked
-                        <?php endif; ?>>
-                    <label for="no">Yes</label>
-                </div> 
-                <div class="row center">
-                    <input type="radio" name="is_admin" value="0"
-                        <?php if(isset($user) && $user['is_admin'] == 0): ?>
-                            checked
-                        <?php endif; ?>>
-                    <label for="no">No</label>
-                </div>            
-            </div>
+                <?php if($_GET['action'] == 'new') :?>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="text" name="adress" placeholder="Adresse du club">
+                <?php endif;?>
 
-            <?php if($_GET['action'] == 'new') :?>
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
-                <input type="text" name="adress" placeholder="Adresse du club">
-            <?php endif;?>
-
-            <label for="club">Club :</label>
-            <select name="club_id" id="pet-id_club">
-                <?php foreach ($clubs as $club): ?>
-                    <option value="<?= $club['id']?>"<?php if(isset($_SESSION['user']) && $_SESSION['user']['club_id'] == $club['id']): ?>selected="selected"<?php endif; ?>><?= $club['name']?></option>
-                <?php endforeach; ?>
-            </select>
+                <label for="club">Club :</label>
+                <select name="club_id" id="pet-id_club">
+                    <?php foreach ($clubs as $club): ?>
+                        <option value="<?= $club['id']?>"<?php if(isset($_SESSION['user']) && $_SESSION['user']['club_id'] == $club['id']): ?>selected="selected"<?php endif; ?>><?= $club['name']?></option>
+                    <?php endforeach; ?>
+                </select>
+            <?php endif; ?>
             
             <input class="btn-see" type="submit" value="Enregistrer" />
         </form>
