@@ -1238,6 +1238,7 @@ nav ul li .burger {
             box-shadow: inset 0px 5px 27px #00000010;
   }
   .user .user-cart .cart-title {
+    position: relative;
     z-index: 444;
   }
   .user .user-cart .cart-title h2 {
@@ -1248,7 +1249,7 @@ nav ul li .burger {
     margin: 20px;
   }
   .user .user-cart .cart-content {
-    margin-top: 90px;
+    margin-top: 0px;
   }
   .user .user-cart .cart-content li {
     margin-bottom: 20px;
